@@ -109,11 +109,11 @@ const ContactSection: React.FC = () => {
         >
           <p className="text-space-white/80">Or reach out directly:</p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:beyondthecode0@gmail.com"
             className="inline-flex items-center gap-2 mt-2 text-cosmic-blue hover:text-cosmic-purple transition-colors"
           >
             <Mail className="w-5 h-5" />
-            your.email@example.com
+            beyondthecode0@gmail.com
           </a>
         </motion.div>
       </div>
