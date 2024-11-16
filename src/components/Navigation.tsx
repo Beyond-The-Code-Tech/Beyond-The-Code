@@ -49,7 +49,7 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, toggleMenu }) => {
               <Github className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
             </a>
             <a
-              href="https://linkedin.com" // Replace with your LinkedIn profile
+              href="https://www.linkedin.com/in/beyond-the-code-960721338/" // Replace with your LinkedIn profile
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
