@@ -9,7 +9,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ isOpen, toggleMenu }) => {
   const menuItems = ['Home', 'Projects', 'Skills', 'Contact'];
-  
+
   return (
     <header className="fixed top-0 w-full p-6 z-20 bg-space-black/50 backdrop-blur-lg">
       <nav className="container mx-auto flex justify-between items-center">
@@ -40,12 +40,28 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, toggleMenu }) => {
             </a>
           ))}
           <div className="flex space-x-4">
-            {[Github, Linkedin, Mail].map((Icon, index) => (
-              <Icon
-                key={index}
-                className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer"
-              />
-            ))}
+            <a
+              href="https://github.com/Beyond-The-Code-Tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+            </a>
+            <a
+              href="https://linkedin.com" // Replace with your LinkedIn profile
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+            </a>
+            <a
+              href="mailto:beyondthecode0@gmail.com"
+              aria-label="Email"
+            >
+              <Mail className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+            </a>
           </div>
         </motion.div>
 
@@ -81,12 +97,28 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, toggleMenu }) => {
               </a>
             ))}
             <div className="flex space-x-6 py-4">
-              {[Github, Linkedin, Mail].map((Icon, index) => (
-                <Icon
-                  key={index}
-                  className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer"
-                />
-              ))}
+              <a
+                href="https://github.com/Beyond-The-Code-Tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/beyond-the-code-960721338/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+              </a>
+              <a
+                href="mailto:beyondthecode0@gmail.com"
+                aria-label="Email"
+              >
+                <Mail className="w-6 h-6 text-space-white hover:text-cosmic-blue transition-colors duration-300 cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
