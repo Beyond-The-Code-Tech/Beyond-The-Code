@@ -17,7 +17,7 @@ const projects: Project[] = [
     title: "Stellar Dashboard",
     description: "A modern analytics dashboard with real-time data visualization and interactive charts.",
     tech: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
-    image: "/demohero.png",
+    image: "https://ibb.co/QKhGgKX",
     liveUrl: "https://stellar-dashboard-ten.vercel.app/",
     githubUrl: "https://github.com/Beyond-The-Code-Tech/Stellar-Dashboard"
   },
