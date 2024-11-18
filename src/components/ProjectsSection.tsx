@@ -18,8 +18,8 @@ const projects: Project[] = [
     description: "A modern analytics dashboard with real-time data visualization and interactive charts.",
     tech: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=1740",
-    liveUrl: "#",
-    githubUrl: "#"
+    liveUrl: "https://stellar-dashboard-ten.vercel.app/",
+    githubUrl: "https://github.com/Beyond-The-Code-Tech/Stellar-Dashboard"
   },
   {
     title: "Nebula Chat",
