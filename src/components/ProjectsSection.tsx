@@ -25,9 +25,9 @@ const projects: Project[] = [
     title: "Nebula Chat",
     description: "Real-time messaging application with end-to-end encryption and file sharing.",
     tech: ["Next.js", "Socket.io", "PostgreSQL", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=1740",
-    liveUrl: "#",
-    githubUrl: "#"
+    image: "https://i.ibb.co/4Sm2Skk/nebula-chat-vercel-app.png",
+    liveUrl: "https://nebula-chat.vercel.app/",
+    githubUrl: "https://github.com/Beyond-The-Code-Tech/Nebula-Chat"
   },
   {
     title: "Quantum Tasks",
