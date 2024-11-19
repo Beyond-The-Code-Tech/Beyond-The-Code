@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Rocket } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Rocket } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 interface Project {
   title: string;
@@ -19,7 +19,7 @@ const projects: Project[] = [
     tech: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
     image: "https://i.ibb.co/pLNp7Ln/demohero.png",
     liveUrl: "https://stellar-dashboard-ten.vercel.app/",
-    githubUrl: "https://github.com/Beyond-The-Code-Tech/Stellar-Dashboard"
+    githubUrl: "https://github.com/Beyond-The-Code-Tech/Stellar-Dashboard",
   },
   {
     title: "Nebula Chat",
@@ -27,7 +27,7 @@ const projects: Project[] = [
     tech: ["Next.js", "Socket.io", "PostgreSQL", "TailwindCSS"],
     image: "https://i.ibb.co/4Sm2Skk/nebula-chat-vercel-app.png",
     liveUrl: "https://nebula-chat.vercel.app/",
-    githubUrl: "https://github.com/Beyond-The-Code-Tech/Nebula-Chat"
+    githubUrl: "https://github.com/Beyond-The-Code-Tech/Nebula-Chat",
   },
   {
     title: "Quantum Tasks",
@@ -35,14 +35,14 @@ const projects: Project[] = [
     tech: ["React", "Node.js", "MongoDB", "OpenAI"],
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1740",
     liveUrl: "#",
-    githubUrl: "#"
-  }
+    githubUrl: "#",
+  },
 ];
 
-const ProjectCard = React.memo<{ project: Project; index: number }>(({ project, index }) => {
+const ProjectCard: React.FC<{ project: Project; index: number }> = React.memo(({ project, index }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0.2,
   });
 
   return (
@@ -51,12 +51,12 @@ const ProjectCard = React.memo<{ project: Project; index: number }>(({ project, 
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className="group relative rounded-xl overflow-hidden bg-nebula-dark/50 backdrop-blur-sm"
+      className="group relative rounded-xl overflow-hidden bg-nebula-dark/50 backdrop-blur-sm shadow-lg"
     >
       <div className="aspect-video overflow-hidden">
         <img
           src={project.image}
-          alt={project.title}
+          alt={`${project.title} Preview`}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
       </div>
@@ -74,18 +74,22 @@ const ProjectCard = React.memo<{ project: Project; index: number }>(({ project, 
           ))}
         </div>
         <div className="flex gap-4">
-          {project.liveUrl && (
+          {project.liveUrl && project.liveUrl !== "#" && (
             <a
               href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-cosmic-blue hover:text-cosmic-purple transition-colors"
             >
               <ExternalLink size={20} />
               <span>Live Demo</span>
             </a>
           )}
-          {project.githubUrl && (
+          {project.githubUrl && project.githubUrl !== "#" && (
             <a
               href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-cosmic-blue hover:text-cosmic-purple transition-colors"
             >
               <Github size={20} />
@@ -98,7 +102,7 @@ const ProjectCard = React.memo<{ project: Project; index: number }>(({ project, 
   );
 });
 
-ProjectCard.displayName = 'ProjectCard';
+ProjectCard.displayName = "ProjectCard";
 
 const ProjectsSection: React.FC = () => {
   return (
@@ -118,7 +122,6 @@ const ProjectsSection: React.FC = () => {
             Explore the digital galaxies I've created, each project a unique star in my development universe.
           </p>
         </motion.div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
