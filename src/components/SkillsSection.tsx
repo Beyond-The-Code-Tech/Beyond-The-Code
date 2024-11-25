@@ -11,22 +11,16 @@ interface Skill {
 
 const skills: Record<string, Skill[]> = {
   "Frontend Development": [
-    { name: "React", icon: <Code />, level: 90, category: "Frontend" },
-    { name: "TypeScript", icon: <Code />, level: 85, category: "Frontend" },
-    { name: "Next.js", icon: <Code />, level: 80, category: "Frontend" },
-    { name: "Tailwind CSS", icon: <Layout />, level: 95, category: "Frontend" }
-  ],
-  "Backend Development": [
-    { name: "Node.js", icon: <Server />, level: 85, category: "Backend" },
-    { name: "PostgreSQL", icon: <Database />, level: 80, category: "Backend" },
-    { name: "GraphQL", icon: <Database />, level: 75, category: "Backend" },
-    { name: "REST APIs", icon: <Server />, level: 90, category: "Backend" }
+    { name: "React", icon: <Code />, level: 80, category: "Frontend" },
+    { name: "TypeScript", icon: <Code />, level: 80, category: "Frontend" },
+    { name: "Next.js", icon: <Code />, level: 70, category: "Frontend" },
+    { name: "Tailwind CSS", icon: <Layout />, level: 85, category: "Frontend" }
   ],
   "Tools & Others": [
     { name: "Git", icon: <Settings />, level: 90, category: "Tools" },
-    { name: "Docker", icon: <Settings />, level: 80, category: "Tools" },
-    { name: "AWS", icon: <Server />, level: 75, category: "Tools" },
-    { name: "Testing", icon: <Settings />, level: 85, category: "Tools" }
+    { name: "Docker", icon: <Settings />, level: 70, category: "Tools" },
+    { name: "AWS", icon: <Server />, level: 65, category: "Tools" },
+    { name: "Testing", icon: <Settings />, level: 75, category: "Tools" }
   ]
 };
 
